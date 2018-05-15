@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="abanoubmagdi.home.sw.PostActivity">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_above="@+id/editting"
+        android:layout_alignParentTop="true">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            fresco:placeholderImage="@drawable/empty"
+            fresco:roundAsCircle="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/pp" />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fullname"
+            android:layout_toRightOf="@+id/pp"
+            android:layout_toEndOf="@+id/pp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="7dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datecreated"
+            android:layout_toRightOf="@+id/fullname"
+            android:layout_toEndOf="@+id/fullname"
+            android:layout_marginLeft="7dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/postcontent"
+            android:textStyle="bold"
+            android:layout_below="@+id/pp"
+            android:layout_margin="8dp"
+            android:textColor="#000"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postcontent"
+        android:id="@+id/comments_in_post_activity"
+        android:backgroundTint="#A9A9A9"></ListView>
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/editting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment"
+        android:hint="Comment"
+        android:focusableInTouchMode="true"
+        android:textCursorDrawable="@null"
+        style="@style/EditTextStyle" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comment"
+        android:layout_below="@+id/comment"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/create_comment"
+        android:visibility="gone"/>
+</RelativeLayout>
+</RelativeLayout>
